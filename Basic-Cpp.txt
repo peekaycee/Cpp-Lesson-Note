@@ -1,0 +1,199 @@
+============================= CLASS 1 ==========================
+C++ Syntax:
+  Line 1: #include <iostream> is a header file library that lets us work with input and output objects, such as cout (used in line 6). Header files add functionality to C++ programs. 
+  Line 2: When you're coding in C++, you often use features from the Standard Library—like `cout`, `cin`, `string`, etc. These features are stored in a namespace called `std`.
+  Think of a namespace like a folder: you can have a variable named x in two different folders, and they won't clash.
+  `std` is like a toolbox (namespace) that holds many useful tools like `cout`, `cin`, `string`.
+  `using namespace std;` lets you use tools from that toolbox without writing `std::` every time.
+  * It's fine for small programs but use with care in bigger ones.
+
+  Line 3: A blank line. C++ ignores white space. But we use it to make the code more readable.
+  
+  Line 4: Another thing that always appear in a C++ program is int main(). This is called a function. Any code inside its curly brackets {} will be executed.
+  
+  Line 5: cout (pronounced "see-out") is an object used together with the insertion operator (<<) to output/print text. In our example, it will output "Hello World!".
+  Note: 
+  - C++ is case-sensitive: "cout" and "Cout" has different meaning.
+  - Every C++ statement ends with a semicolon ;.
+  - The body of int main() could also been written as:
+  - int main () { cout << "Hello World! "; return 0; }
+  
+  Remember: The compiler ignores white spaces. However, multiple lines makes the code more readable.
+  
+  Line 6:  '::' called the scope resolution operator
+
+  Line 7: return 0; ends the main function.
+  
+  Line 8: Do not forget to add the closing curly bracket '}' to actually end the main function.
+
+================================================================
+Namespaces:
+  A namespace is a way to group related code together under a name. It helps you avoid naming conflicts when your code grows or when you use code from multiple sources.
+
+  Think of a namespace like a folder: you can have a variable named x in two different folders, and they won't clash.
+
+  Why Use Namespaces?
+    To avoid name conflicts, especially in larger projects
+    To organize code into logical groups
+    To separate your code from code in libraries
+
+  Try out Namespace Examples...
+
+================================================================
+Output:
+  The cout object, together with the << (insertion operator), is used to output values/print text.
+  You can add as much as you want.
+
+
+================================================================
+New Lines Charater:
+  To insert a new line, you can use the \n character (called an escape sequence).
+  To insert a new line, you can also use the endl manipulator.
+  Using endl flushes the buffer (displays the output immediately), while \n charater is more performant.
+
+
+================================================================
+Comments:
+  Single line comments - //
+  Multi-line comments - starts with /* and ends with */
+  
+  Note: 
+    Comments are ignored by the compiler, and are used to explain code, making it more readable for humans.
+    Comments can also be used to prevent execution of code, which is useful for debugging.
+
+================================================================
+Variables:
+  Declaration
+    int num;
+  
+  Assignment
+    num = 15;
+
+  Both process above is called 'Initialization'
+    
+  Declaring Many Variables:
+    int x = 5, y = 6, z = 50;
+          OR   
+    int x, y, z;
+    x = y = z = 50;
+
+================================================================
+Indentifier (unique names for variables):
+  The general RULES for naming variables are:
+    1. Names can contain letters, digits and underscores.
+    2. Names must begin with a letter or an underscore (_).
+    3. Names are case sensitive (myVar and myvar are different variables).
+    4. Names cannot contain whitespaces or special characters like !, #, %, etc.
+    5. Reserved words (like C++ keywords, such as int) cannot be used as names.
+      Note: It is recommended to use descriptive names in order to create understandable and maintainable code.
+
+================================================================
+Exercise: 
+  1. Create a boiler plate for most cpp code base.
+  2. Output your name to the console with your first-name on the first line and your last-name on the third line.
+  3. Create a single line comment describing a title for any function of your choice.
+  4. Place comments on every line of your function describing what exactly that line does.
+  5. Create a multiline comment that summarizing the functionality in 1 above.
+
+Assignment:
+  Read up on what buffering is and what it means to flush the buffer (endl & \n)
+
+=============================== End ============================
+
+
+============================= CLASS 2 ==========================
+Constants:
+  To prevent overriding existing variable values, use the const keyword (this will declare the variable as "constant", which means unchangeable and read-only).
+
+  const int myNum = 15;  -> myNum will always be 15
+  myNum = 10;  -> error: assignment of read-only variable 'myNum'
+
+================================================================
+User Input:
+  cout is pronounced "see-out". Used for output, and uses the insertion operator (<<)
+  cin is pronounced "see-in". Used for input, and uses the extraction operator (>>)
+  cin is a predefined variable that reads data from the keyboard with the extraction operator (>>).
+
+  NOTE the following: 
+    1. Taking input with space, use the getline() function -> getline(cin, var_name);
+        However, cin considers a space (whitespace, tabs, etc) as a terminating character, which means that it can only store a single word (even if you type many words). That's why, when working with strings, we often use the getline() function to read a line of text. It takes cin as the first parameter, and the string variable as second.
+
+    2. Use getline(cin >> ws, var_name) to eliminate any new line characters in the buffer from a previous line.
+  
+  EXERCISE: 
+    Create a calculator where users must input two numbers. Then print the sum of the two numbers.
+    
+================================================================
+Data Type:
+  int myNum = 5;               -> Integer (whole number)
+  float myFloatNum = 5.99;     -> Floating point number | 4 bytes | 7 decimals digits
+  double myDoubleNum = 9.98;   -> Floating point number | 8 bytes | 15 decimals digits | Safer for use
+  char myLetter = 'D';         -> Character
+  bool myBoolean = true;       -> Boolean (When the value is returned, true = 1 and false = 0)
+  string myText = "Hello";     -> String (a sequence of characters, texts)
+  auto num = 5 (this infers the data type of the variable and must be assigned). This is not a data type though just a keyword...!
+
+  EXERCISE: 
+    Create your own data opf different types using all the data-type listed above.
+
+================================================================
+Operators: 
+  Arithmetic: +, -, /, *, %, ++, --
+  Assignment: =, += etc...
+  Comparison: ==, !=, >, <, >=, <=
+  Logical: &&, ||, !,
+
+=============================== End ============================
+
+
+============================= CLASS 3 ==========================
+Strings:
+  1. Concatenation (i.e using the + sign to combine strings together). You can also use the append() method
+  
+  2. Adding Numbers and strings
+     This gives an error and isn't possible
+  
+  3. Length of characers in a string
+     use the function length() or size() like so text.length()
+  
+  4. Accessing the characters in Strings
+     string chararcters are index from 0 and can be accessed by using bracket notations [] like so text[0] for the first element. 
+     
+     Getting the last element, by using text[text.length() - 1]
+     Characters can also be changed like so text[0] = "Some_character". OR text.at(0) = "Some_character";
+  
+  5. Backslash Escape Character
+     Examples include; -> \', \", \\, \n, \t
+  
+  6. C-Style Strings (an array of characters)
+    string myName[] = "Kelechi";
+
+================================================================
+C++ Math:
+  max(a, b) | min(a, b) -> check references for more...
+  <cmath> Library (sqrt | round | log) -> check references for more...
+
+================================================================
+
+
+================================================================
+
+
+=============================== End ============================
+
+
+
+============================= CLASS 4 ==========================
+
+================================================================
+
+================================================================
+
+================================================================
+
+=============================== End ============================
+
+
+
+
+
