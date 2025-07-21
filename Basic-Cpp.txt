@@ -116,7 +116,7 @@ User Input:
     1. Taking input with space, use the getline() function -> getline(cin, var_name);
         However, cin considers a space (whitespace, tabs, etc) as a terminating character, which means that it can only store a single word (even if you type many words). That's why, when working with strings, we often use the getline() function to read a line of text. It takes cin as the first parameter, and the string variable as second.
 
-    2. Use getline(cin >> ws, var_name) to eliminate any new line characters in the buffer from a previous line.
+    **2. Use getline(cin >> ws, var_name) to eliminate any new line characters in the buffer from a previous line.
   
   EXERCISE: 
     Create a calculator where users must input two numbers. Then print the sum of the two numbers.
@@ -132,14 +132,25 @@ Data Type:
   auto num = 5 (this infers the data type of the variable and must be assigned). This is not a data type though just a keyword...!
 
   EXERCISE: 
-    Create your own data opf different types using all the data-type listed above.
+    Create your own data of different types using all the data-type listed above.
 
 
 Operators: 
-  Arithmetic: +, -, /, *, %, ++, --
+  Arithmetic: +, -, /, *, %, ++, -- PEMDAS
   Assignment: =, += etc...
   Comparison: ==, !=, >, <, >=, <=
   Logical: &&, ||, !,
+
+  && false preceeds
+  F && F = FALSE
+  T && T = TRUE
+  F && T && T && T = FALSE
+  
+  || true preceeds
+  F || F = FALSE
+  T || T = TRUE
+  F || T = TRUE
+
 
 =============================== End ============================
 

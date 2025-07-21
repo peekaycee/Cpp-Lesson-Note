@@ -1,11 +1,17 @@
 #include <iostream>
-#include <cmath>
+#include <typeinfo>
+#include <cxxabi.h>
+#include <cstdlib>
 using namespace std;
 
-int main(){
-  string x = "Hello";
-  string changeLoginPassword = "Hello Greece";
-  cout << changeLoginPassword << "\n";
-  // cout << cmath.Random();
-  return 0;
+int main() {
+    
+  int a = 5, b = 10;
+
+
+  cout << !(a != b);
+
+    return 0;
 }
+
+
