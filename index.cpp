@@ -1,17 +1,47 @@
 #include <iostream>
-#include <typeinfo>
-#include <cxxabi.h>
-#include <cstdlib>
+#include <cmath>
 using namespace std;
 
 int main() {
+
+  // Example
+      // int time = 20;
+      // if (time < 18) {
+      //   cout << "Good day.";
+      // } else {
+      //   cout << "Good evening.";
+      // }
     
-  int a = 5, b = 10;
+    // You can simply write...
 
-
-  cout << !(a != b);
-
-    return 0;
+      int time = 20;
+      string result = (time > 18)? & "Good day.";
+      cout << result;
+       
+  return 0;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// https://meet.google.com/sxt-ejeb-coj
+// cd "c:\Users\user\Desktop\Cpp\" ; if ($?) { g++ index.cpp -o index } ; if ($?) { .\index }
