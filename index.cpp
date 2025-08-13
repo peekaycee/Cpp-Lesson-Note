@@ -1,47 +1,24 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
 
 int main() {
+  
+  // Check this out please and see if you can understand it... 
 
-  // Example
-      // int time = 20;
-      // if (time < 18) {
-      //   cout << "Good day.";
-      // } else {
-      //   cout << "Good evening.";
-      // }
+    int time = 20;
+    int condition = (time < 12) ? 1 : (time > 12) ? 2 : (time == 12) ? 3 : 0; 
     
-    // You can simply write...
+    switch(condition) {
+      case 1:
+        cout << "Good Morning" << endl;
+        break;
+      case 2:
+        cout << "Good Afternoon" << endl;
+        break;
+      case 3:
+        cout << "It's Mid-day" << endl;
+        break;
+    }
 
-      int time = 20;
-      string result = (time > 18)? & "Good day.";
-      cout << result;
-       
-  return 0;
+    return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// https://meet.google.com/sxt-ejeb-coj
-// cd "c:\Users\user\Desktop\Cpp\" ; if ($?) { g++ index.cpp -o index } ; if ($?) { .\index }
